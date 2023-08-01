@@ -41,7 +41,7 @@ class AddRecordFrom(forms.ModelForm):
     address=forms.CharField(required=True,label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Address'}))
     city=forms.CharField(required=True,label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'City'}))
     state=forms.CharField(required=True,label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'State'}))
-    zipcode=forms.CharField(required=True, label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Zipcode'}))
+    # zipcode=forms.CharField(required=True, label="",max_length=100, widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Zipcode'}))
     class Meta:
         model=Record
-        exclude=['user','date_of_birth']
+        fields=('first_name','last_name','email','phone','address','city','state')
